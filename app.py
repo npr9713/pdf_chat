@@ -96,6 +96,7 @@ def main():
             with st.spinner("Processing..."):
                 raw_text = get_pdf_text(pdf_docs)
                 text_chunks = get_text_chunks(raw_text)
+                st.write(text_chunks)
                 get_vector_store(text_chunks)
                 st.success("Done")
 
